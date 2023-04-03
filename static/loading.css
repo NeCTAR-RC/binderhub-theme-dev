@@ -12,7 +12,7 @@ https://ihatetomatoes.net for initial code templates.*/
 }
 
 .worker-loader {
-    background-image: url("/static/images/bee-loader.svg");
+    background-image: url("/extra_static/images/bee-loader.svg");
     background-repeat: no-repeat;
     display: inline-block;
     animation: spinLoader 4s linear infinite;
