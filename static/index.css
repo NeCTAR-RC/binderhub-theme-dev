@@ -290,18 +290,18 @@ h4 {
 }
 
 .point-orange {
-    border-color: rgb(247, 144, 42);
-    color: rgb(247, 144, 42);
+    border-color: #F8B20E;
+    color: #000000;
 }
 
 .point-red {
-    border-color: rgb(204, 67, 101);
-    color: rgb(204, 67, 101);
+    border-color: #E51875;
+    color: #000000;
 }
 
 .point-blue {
-    border-color: rgb(41, 124, 184);
-    color: rgb(41, 124, 184);
+    border-color: #00A2C4;
+    color: #000000;
 }
 
 /*reduce font size of h1 and h2 so the initial design when h3 and h4 tags were used respectively is retained*/

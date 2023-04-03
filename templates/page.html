@@ -2,44 +2,42 @@
 
 {% block title %}ARDC Nectar Binderhub{% endblock %}
 {% block head %}
-  <link id="favicon" rel="shortcut icon" type="image/x-icon" href="{{ EXTRA_STATIC_URL_PREFIX }}/images/favicon.ico" />
+  <link id="favicon" rel="shortcut icon" type="image/x-icon" href="{{ EXTRA_STATIC_URL_PREFIX }}images/favicon.ico" />
   <link href="{{static_url('dist/styles.css')}}" rel="stylesheet"></link>
-  <link href="{{ EXTRA_STATIC_URL_PREFIX }}/index.css" rel="stylesheet"></link>
+  <link href="{{ EXTRA_STATIC_URL_PREFIX }}index.css" rel="stylesheet"></link>
 {% endblock head %}
 
 {% block body %}
 
-  {% if banner %}
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-            <span id="binderhub-logo">
-              <a id="nectar-logo" href="{{ base_url }}">
-                <img src="{{ EXTRA_STATIC_URL_PREFIX }}/images/ardc_nectar_research_cloud.svg" height="60" alt="ARDC Nectar Research Cloud" title="Home" /> Jupyter Notebook Service
-              </a>
-            </span>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#thenavbar" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-        </div>
-    
-        <div class="collapse navbar-collapse" id="thenavbar">
-          <ul class="nav navbar-nav">
-            {% if user %}
-                <li><a href="{{ base_url }}">Home</a></li>
-                <li><a href="https://support.ehelp.edu.au/a/solutions/articles/6000261095">About</a></li>
-                <li><a href="https://support.ehelp.edu.au">Help</a></li>
-            {% else %}
-              <li><a href="https://support.ehelp.edu.au/a/solutions/articles/6000261095">About</a></li>
-            {% endif %}
-          </ul>
-        </div>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+          <span id="binderhub-logo">
+            <a id="nectar-logo" href="{{ base_url }}">
+              <img src="{{ EXTRA_STATIC_URL_PREFIX }}images/ardc_nectar_research_cloud.svg" height="60" alt="ARDC Nectar Research Cloud" title="Home" /> Jupyter Notebook Service
+            </a>
+          </span>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#thenavbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
       </div>
-    </nav>
-  {% endif %}
+  
+      <div class="collapse navbar-collapse" id="thenavbar">
+        <ul class="nav navbar-nav">
+          {% if user %}
+              <li><a href="{{ base_url }}">Home</a></li>
+              <li><a href="https://support.ehelp.edu.au/a/solutions/articles/6000261095">About</a></li>
+              <li><a href="https://support.ehelp.edu.au">Help</a></li>
+          {% else %}
+            <li><a href="https://support.ehelp.edu.au/a/solutions/articles/6000261095">About</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   {% block logo %}
   <div class="container">
@@ -87,7 +85,7 @@
           </div>
         </div> <!-- row -->
         <div class="row footer-links">
-          <div class="col-sm-3 col-xs-6">
+          <div class="col-xs-6 col-sm-3">
             <h4>Quicklinks</h4>
             <ul class="list-unstyled">
               <li><a href="/">Home</a></li>
@@ -95,7 +93,7 @@
               <li><a href="https://ardc.edu.au/privacy-policy/">Privacy Policy</a></li>
             </ul>
           </div>
-          <div class="col-sm-3 col-xs-6">
+          <div class="col-xs-6 col-sm-3">
             <h4>Explore</h4>
             <ul class="list-unstyled">
               <li><a href="https://support.ehelp.edu.au/support/solutions/folders/6000190150">Cloud Basics</a></li>
@@ -104,7 +102,7 @@
               <li><a href="https://support.ehelp.edu.au/support/solutions/folders/6000190155">Cloud Fundamentals</a></li>
             </ul>
           </div>
-          <div class="col-sm-3 col-xs-6">
+          <div class="col-xs-6 col-sm-3">
             <h4>Help</h4>
             <ul class="list-unstyled">
               <li><a href="https://support.ehelp.edu.au/support/tickets/new" target="_blank">Request Support</a></li>
@@ -112,7 +110,7 @@
               <li><a href="https://tutorials.rc.nectar.org.au">Tutorials</a></li>
             </ul>
           </div>
-          <div class="col-sm-3 col-xs-6">
+          <div class="col-xs-6 col-sm-3">
             <h4>External Resources</h4>
             <ul class="list-unstyled">
               <li><a href="https://ardc.edu.au/">ARDC Home</a></li>
