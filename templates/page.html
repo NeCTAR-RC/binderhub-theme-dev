@@ -14,7 +14,7 @@
       <div class="navbar-header">
           <span id="binderhub-logo">
             <a id="nectar-logo" href="{{ base_url }}">
-              <img src="{{ EXTRA_STATIC_URL_PREFIX }}images/ardc_nectar_research_cloud.svg" height="60" alt="ARDC Nectar Research Cloud" title="Home" /> Jupyter Notebook Service
+              <img src="{{ EXTRA_STATIC_URL_PREFIX }}images/ardc_nectar_research_cloud.svg" height="60" alt="ARDC Nectar Research Cloud" title="Home" /> Binderhub Service
             </a>
           </span>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#thenavbar" aria-expanded="false">
@@ -27,13 +27,9 @@
   
       <div class="collapse navbar-collapse" id="thenavbar">
         <ul class="nav navbar-nav">
-          {% if user %}
-              <li><a href="{{ base_url }}">Home</a></li>
-              <li><a href="https://support.ehelp.edu.au/a/solutions/articles/6000261095">About</a></li>
-              <li><a href="https://support.ehelp.edu.au">Help</a></li>
-          {% else %}
-            <li><a href="https://support.ehelp.edu.au/a/solutions/articles/6000261095">About</a></li>
-          {% endif %}
+          <li><a href="{{ base_url }}">Home</a></li>
+          <li><a href="https://support.ehelp.edu.au/a/solutions/articles/6000261095">About</a></li>
+          <li><a href="https://support.ehelp.edu.au">Help</a></li>
         </ul>
       </div>
     </div>

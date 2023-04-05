@@ -16,7 +16,7 @@
 <meta id="build-token" data-token="{{ build_token }}">
 {{ super() }}
 <script src="{{static_url("dist/bundle.js")}}"></script>
-<link href="{{static_url("loading.css")}}" rel="stylesheet">
+<link href="{{ EXTRA_STATIC_URL_PREFIX }}loading.css" rel="stylesheet"></link>
 {% endblock head %}
 
 {% block main %}
@@ -40,25 +40,26 @@
 </div>
 
 {% block preview %}
-{% if nbviewer_url %}
-<div class="preview container">
-<p class="preview-text text-center">
-Here's a non-interactive preview on
-<a target="_blank" href="https://nbviewer.jupyter.org">nbviewer</a>
-while we start a server for you.
-Your binder will open automatically when it is ready.
-</p>
-<div id="nbviewer-preview">
-  <iframe src="{{ nbviewer_url }}"></iframe>
-</div>
-</div>
-{% endif %}
+  {% if nbviewer_url %}
+  <div class="preview container">
+  <p class="preview-text text-center">
+  Here's a non-interactive preview on
+  <a target="_blank" href="https://nbviewer.jupyter.org">nbviewer</a>
+  while we start a server for you.
+  Your binder will open automatically when it is ready.
+  </p>
+  <div id="nbviewer-preview">
+    <iframe src="{{ nbviewer_url }}"></iframe>
+  </div>
+  </div>
+  {% endif %}
 {% endblock preview %}
 
 {% endblock main %}
 
 {% block footer %}
-<script type="text/javascript">
-loadingMain("{{provider_spec}}");
-</script>
+  {{ super() }}
+  <script type="text/javascript">
+  loadingMain("{{provider_spec}}");
+  </script>
 {% endblock footer %}
