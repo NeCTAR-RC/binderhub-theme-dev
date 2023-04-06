@@ -5,6 +5,7 @@
   <link id="favicon" rel="shortcut icon" type="image/x-icon" href="{{ EXTRA_STATIC_URL_PREFIX }}images/favicon.ico" />
   <link href="{{static_url('dist/styles.css')}}" rel="stylesheet"></link>
   <link href="{{ EXTRA_STATIC_URL_PREFIX }}index.css" rel="stylesheet"></link>
+  <script src="{{static_url("dist/bundle.js")}}"></script>
 {% endblock head %}
 
 {% block body %}
@@ -12,17 +13,17 @@
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-          <span id="binderhub-logo">
-            <a id="nectar-logo" href="{{ base_url }}">
-              <img src="{{ EXTRA_STATIC_URL_PREFIX }}images/ardc_nectar_research_cloud.svg" height="60" alt="ARDC Nectar Research Cloud" title="Home" /> Binderhub Service
-            </a>
-          </span>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#thenavbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+        <span id="binderhub-logo">
+          <a id="nectar-logo" href="{{ base_url }}">
+            <img src="{{ EXTRA_STATIC_URL_PREFIX }}images/ardc_nectar_research_cloud.svg" height="60" alt="ARDC Nectar Research Cloud" title="Home" /> Binderhub Service
+          </a>
+        </span>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#thenavbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
       </div>
   
       <div class="collapse navbar-collapse" id="thenavbar">
