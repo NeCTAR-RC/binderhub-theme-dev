@@ -39,6 +39,10 @@ p > a:hover {
     text-decoration: none;
 }
 
+#main {
+    padding-top: 60px;
+}
+
 #build-form {
     color: rgb(50,50,50);
     background: rgb(235, 236, 237);
