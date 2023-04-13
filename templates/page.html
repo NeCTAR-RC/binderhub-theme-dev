@@ -15,7 +15,7 @@
       <div class="navbar-header">
         <span id="binderhub-logo">
           <a id="nectar-logo" href="{{ base_url }}">
-            <img src="{{ EXTRA_STATIC_URL_PREFIX }}images/ardc_nectar_research_cloud.svg" height="60" alt="ARDC Nectar Research Cloud" title="Home" /> Binderhub Service
+            <img src="{{ EXTRA_STATIC_URL_PREFIX }}images/ardc_nectar_research_cloud.svg" height="60" alt="ARDC Nectar Research Cloud" title="Home" /> BinderHub Service
           </a>
         </span>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#thenavbar" aria-expanded="false">
@@ -29,22 +29,12 @@
       <div class="collapse navbar-collapse" id="thenavbar">
         <ul class="nav navbar-nav">
           <li><a href="{{ base_url }}">Home</a></li>
-          <li><a href="https://support.ehelp.edu.au/a/solutions/articles/6000261095">About</a></li>
-          <li><a href="https://support.ehelp.edu.au">Help</a></li>
+          <li><a href="https://support.ehelp.edu.au">About</a></li>
+          <li><a href="https://support.ehelp.edu.au">Support Centre</a></li>
         </ul>
       </div>
     </div>
   </nav>
-
-  {% block logo %}
-  <div class="container">
-    <div class="row">
-      <div id="logo-container">
-        <img id="logo" src={% block logo_image %}"{{static_url("logo.svg")}}"{% endblock logo_image %} width="390px" alt="Binder logo" />
-      </div>
-    </div>
-  </div>
-  {% endblock logo %}
 
   {% block main %}
   {% endblock main %}
