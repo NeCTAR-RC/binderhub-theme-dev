@@ -4,6 +4,7 @@
 {% block head %}
   <link id="favicon" rel="shortcut icon" type="image/x-icon" href="{{ EXTRA_STATIC_URL_PREFIX }}images/favicon.ico" />
   <link href="{{static_url('dist/styles.css')}}" rel="stylesheet"></link>
+  <link href="{{ EXTRA_STATIC_URL_PREFIX }}fa.css" rel="stylesheet"></link>
   <link href="{{ EXTRA_STATIC_URL_PREFIX }}index.css" rel="stylesheet"></link>
   <script src="{{static_url("dist/bundle.js")}}"></script>
 {% endblock head %}
@@ -33,10 +34,9 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
-              <span id="login_widget">
-                <p class="navbar-text">d.malby@uq.edu.au</p>
-                <a id="logout" role="button" class="navbar-btn btn-sm btn btn-default" href="https://jupyter.test.rc.nectar.org.au/hub/logout"> <i aria-hidden="true" class="fa fa-sign-out"></i> Logout</a>
-              </span>
+            <span id="login_widget">
+              <a id="logout" role="button" class="navbar-btn btn-sm btn btn-default" href="{{ JUPYTERHUB_URL }}/hub/logout"> <i aria-hidden="true" class="fa fa-sign-out"></i> Logout</a>
+            </span>
           </li>
         </ul>
       </div>
