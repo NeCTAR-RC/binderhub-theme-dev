@@ -28,7 +28,7 @@
   <div id="loader-links">
     <p class="text-center">New to Binder? Check out the <a target="_blank" href="https://mybinder.readthedocs.io/en/latest/">Binder Documentation</a> for more information</p>
   </div>
-  <div id="loader-help" style="display: none;">
+  <div id="loader-help">
     <p class="text-center">Your session is taking longer than usual to start!<br />Do you already have a server running? <a href="{{ JUPYTERHUB_URL }}/hub/home">Go to the server home page</a> to check.</p>
   </div>
 
@@ -68,6 +68,10 @@
     setTimeout(() => {
       $('div#loader-links').hide();
       $('div#loader-help').show();
+<<<<<<< HEAD
     }, 60000);
+=======
+    }, 30000);
+>>>>>>> abdf6ab (Changed the message on loading page  when it takes a long time.)
   </script>
 {% endblock footer %}
