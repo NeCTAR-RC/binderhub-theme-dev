@@ -65,9 +65,11 @@
   {{ super() }}
   <script type="text/javascript">
     loadingMain("{{provider_spec}}");
-    setTimeout(() => {
-      $('div#loader-links').hide();
-      $('div#loader-help').show();
-    }, 30000);
+    $(document.ready(function() {
+      setTimeout(() => {
+        $('div#loader-links').hide();
+        $('div#loader-help').show();
+      }, 30000);
+    });
   </script>
 {% endblock footer %}
