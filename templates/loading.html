@@ -65,7 +65,7 @@
   {{ super() }}
   <script type="text/javascript">
     loadingMain("{{provider_spec}}");
-    $(document.ready(function() {
+    $(document).ready(function() {
       setTimeout(() => {
         $('div#loader-links').hide();
         $('div#loader-help').show();
