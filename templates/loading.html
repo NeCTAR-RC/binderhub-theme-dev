@@ -14,6 +14,7 @@
   <meta id="base-url" data-url="{{base_url}}">
   <meta id="badge-base-url" data-url="{{badge_base_url}}">
   <meta id="build-token" data-token="{{ build_token }}">
+
   {{ super() }}
   <link href="{{ EXTRA_STATIC_URL_PREFIX }}loading.css" rel="stylesheet"></link>
 {% endblock head %}
@@ -26,6 +27,9 @@
   </div>
   <div id="loader-links">
     <p class="text-center">New to Binder? Check out the <a target="_blank" href="https://mybinder.readthedocs.io/en/latest/">Binder Documentation</a> for more information</p>
+  </div>
+  <div id="loader-help" style="display: none;">
+    <p class="text-center">Your session is taking longer than usual to start!<br />Do you already have a server running? <a href="{{ JUPYTERHUB_URL }}/hub/home">Go to the server home page</a> to check.</p>
   </div>
 
   <div id="log-container" class="panel panel-default on-build hidden row">
@@ -60,6 +64,10 @@
 {% block footer %}
   {{ super() }}
   <script type="text/javascript">
-  loadingMain("{{provider_spec}}");
+    loadingMain("{{provider_spec}}");
+    setTimeout(() => {
+      $('div#loader-links').hide();
+      $('div#loader-help').show();
+    }, 60000);
   </script>
 {% endblock footer %}
