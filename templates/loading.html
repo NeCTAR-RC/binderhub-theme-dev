@@ -29,7 +29,7 @@
     <p class="text-center">New to Binder? Check out the <a target="_blank" href="https://mybinder.readthedocs.io/en/latest/">Binder Documentation</a> for more information</p>
   </div>
   <div id="loader-help">
-    <p class="text-center">There seems to be a problem starting your session.<br />Do you already have a server running? <a href="{{ JUPYTERHUB_URL }}/hub/home">Go to the server page</a> to check, or try <a href="javascript:window.location.reload(true)">reloading this page</a>.</p>
+    <p class="text-center">There seems to be a problem starting your session.<br />Do you already have a server running? <a href="{{ JUPYTERHUB_URL }}/hub/home">Go to the server page</a> to check, or try <a href="javascript:window.location.reload()">reloading this page</a>.</p>
   </div>
 
   <div id="log-container" class="panel panel-default on-build hidden row">
@@ -65,15 +65,20 @@
   {{ super() }}
   <script type="text/javascript">
     loadingMain("{{provider_spec}}");
-    if(document.getElementById('loader').classList.contains('error')) {
-      document.getElementById('loader-links').style.display = 'none';
-      document.getElementById('loader-help').style.display = 'block';
-    }
-    else {
-      setTimeout(() => {
+    window.addEventListener('load', function () {
+      // When the page has loaded, check if there is an error
+      if(document.getElementById('loader').classList.contains('error')) {
+        // Display the error message
         document.getElementById('loader-links').style.display = 'none';
         document.getElementById('loader-help').style.display = 'block';
-      }, 30000);
-    }
+      }
+      else {
+        // Display the error message when launching is taking too long
+        setTimeout(() => {
+          document.getElementById('loader-links').style.display = 'none';
+          document.getElementById('loader-help').style.display = 'block';
+        }, 30000);
+      }
+    });
   </script>
 {% endblock footer %}
